@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Số tổng 20 số đầu tiên</title>
+    </head>
+    <body>
+        <h1>Total 20 số đầu tiên trong dãy</h1>
+        <button id="btn">Click me</button>
+        <p id="display"></p>
+        <p id="displaySum"></p>
+    <script>
+        document.getElementById("btn").onclick =
+            function check(){
+                let number1 = 1;
+                let number2 = 2;
+                let number3;
+                let sum = 0 ;
+                let display = `20 Số đầu tiên trong dãy là: `;
+                let displaySum = `Tổng các số đầu tiên trong dãy là:`;
+                for(let i = 0; i < 10 ; i++){
+                    number3 = number1 + number2;
+                    number1 = number2;
+                    number2 = number3;
+                    display += `, ${number3}`;
+                    sum += number3;
+                }
+                displaySum += `, ${sum}`;
+                document.getElementById("display").innerHTML = display;
+                document.getElementById("displaySum").innerHTML = displaySum;
+            }
+    </script>
+    </body>
+</html>

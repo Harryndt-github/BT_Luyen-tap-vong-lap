@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Hiển thị số chia hết cho 5 đầu tiên</title>
+    <body>
+        <h1>Tìm số đầu tiên chia hết cho 5</h1>
+        <button id="btn">Click me</button>
+        <p id="display"></p>
+        <script>
+             document.getElementById("btn").onclick = function check(){
+                    let number1 = 1;
+                    let number2 = 2;
+                    let number3;
+                    let display = `Số đầu tiên chia hết cho 5 trong dãy số ` 
+                    let a = 2;
+                    let fibLength = 3;
+                    while( a < fibLength){
+                        number3 = number1 + number2;
+                        if(number3 % 5 == 0){
+                            break;
+                        } else {
+                            number1 = number2;
+                            number2 = number3;
+                        }
+                        fibLength++;
+                        a++;
+                    }
+                    display += `${number3}`;
+                    document.getElementById("display").innerHTML = display;
+                }
+        </script>
+    </body>
+    </head>
+</html>

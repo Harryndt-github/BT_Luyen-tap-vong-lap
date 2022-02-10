@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tăng nhiệt độ</title>
+</head>
+
+<body>
+    <script>
+        let temp = prompt('Nhập nhiệt độ hiện tại: ');
+        if (temp <= 100 || temp >= 20){
+            alert('Nhiệt độ tiêu chuẩn');
+        }
+        while (temp < 20 || temp > 100){
+            if (temp < 20){
+                temp = prompt('Nhiệt độ quá thấp, vui lòng tăng nhiệt độ: ');
+            } else if (temp > 100){
+                temp = prompt('Nhiệt độ quá cao, vui lòng giảm nhiệt độ: ');
+            }
+        }
+    </script>
+</body>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>30 số tự nhiên đầu tiên chia hết cho 7</title>
+</head>
+<body>
+<h1>Tính tổng 30 số tự nhiên đầu tiên chia hết cho 7</h1>
+<button id="btn">Click me</button>
+<p id="display"></p>
+<p id="sum"></p>
+<script>
+    document.getElementById("btn").onclick =
+        function check(){
+            let sum = 0;
+            let display = `30 số đầu tiên chia hết cho 7 là: `;
+            let displaySum = `Tổng các số đầu tiên chia hết cho 7 là: `;
+            for(let i = 1; i <= 30; i++){
+                if(i % 7 == 0){
+                    display += `${i}, `;
+                    sum += i;
+                }
+            }
+            displaySum += `${sum}`;
+            document.getElementById("display").innerHTML = display;
+            document.getElementById("sum").innerHTML = displaySum;
+        }
+</script>
+</body>
+</html>
